@@ -17,11 +17,11 @@ namespace Image_viewer
         {
             InitializeComponent();
         }
-        private int pictureBoxHeight, pictureBozWidth;
+        private int pictureBoxHeight, pictureBoxWidth;
         private void Form1_Load(object sender, EventArgs e)
         {
             this.pictureBoxHeight = this.pictureBox1.Height;
-            this.pictureBozWidth = this.pictureBox1.Width;
+            this.pictureBoxWidth = this.pictureBox1.Width;
 
             this.listBox1.Sorted = true;
             FillListBox(Application.StartupPath + "\\");
@@ -44,10 +44,28 @@ namespace Image_viewer
         {
             double mh, mw;
             pictureBox1.Image = new Bitmap(label1.Text + listBox1.SelectedItem.ToString());
-            if ((pictureBox1.Image.Width > pictureBozWidth)||
+            if ((pictureBox1.Image.Width > pictureBoxWidth) ||
                 (pictureBox1.Image.Height > pictureBoxHeight))
             {
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                mh = (double)pictureBoxHeight / (double)pictureBox1.Image.Height;
+                mw = (double)pictureBoxWidth / (double)pictureBox1.Image.Width;
+
+                if (mh < mw)
+                {
+                    pictureBox1.Width = Convert.ToInt32(pictureBox1.Image.Width * mh);
+                    pictureBox1.Height = pictureBoxHeight;
+                }
+                else
+                {
+                    pictureBox1.Width = pictureBoxWidth;
+                    pictureBox1.Height = Convert.ToInt32(pictureBox1.Image.Height * mw);
+                }
+            }
+            else
+            {
+                if (pictureBox1.SizeMode == PictureBoxSizeMode.StretchImage)
+                    pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             }
         }
 
