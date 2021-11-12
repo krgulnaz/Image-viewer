@@ -26,6 +26,31 @@ namespace Image_viewer
             this.listBox1.Sorted = true;
             FillListBox(Application.StartupPath + "\\");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fb = new FolderBrowserDialog();
+            fb.Description = "Select the folder";
+            fb.ShowNewFolderButton = false;
+
+            if (fb.ShowDialog() == DialogResult.OK)
+            {
+                if (!FillListBox(fb.SelectedPath + "\\"))
+                    pictureBox1.Image = null;
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            double mh, mw;
+            pictureBox1.Image = new Bitmap(label1.Text + listBox1.SelectedItem.ToString());
+            if ((pictureBox1.Image.Width > pictureBozWidth)||
+                (pictureBox1.Image.Height > pictureBoxHeight))
+            {
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
         public Boolean FillListBox(string aPath)
         {
             DirectoryInfo di = new DirectoryInfo(aPath);
