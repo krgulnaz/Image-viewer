@@ -1,0 +1,10 @@
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\bin\Debug\Image viewer.exe.config
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\bin\Debug\Image viewer.exe
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\bin\Debug\Image viewer.pdb
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\obj\Debug\Image viewer.csprojAssemblyReference.cache
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\obj\Debug\Image_viewer.Form1.resources
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\obj\Debug\Image_viewer.Properties.Resources.resources
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\obj\Debug\Image viewer.csproj.GenerateResource.cache
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\obj\Debug\Image viewer.csproj.CoreCompileInputs.cache
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\obj\Debug\Image viewer.exe
+E:\Projects\TaskGitHub\Image viewer\Image viewer\Image viewer\obj\Debug\Image viewer.pdb
